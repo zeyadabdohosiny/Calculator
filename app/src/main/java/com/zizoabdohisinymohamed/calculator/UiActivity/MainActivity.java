@@ -213,9 +213,6 @@ public class MainActivity extends AppCompatActivity {
                 list.add(new OperationModle("+", "" + secondeOperande));
                 Log.d(TAG, "" + list.size());
 
-            } else {
-
-                Toast.makeText(this, "Please enter A number", Toast.LENGTH_SHORT).show();
             }
 
 
@@ -320,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
    // Equal Method / This method Show to the User the Last result
     public void equal() {
         if(binding.EtSecondOperand.getText().toString().isEmpty()){
-            Toast.makeText(this, "Some thing wrong", Toast.LENGTH_SHORT).show();
+         //   Toast.makeText(this, "Some thing wrong", Toast.LENGTH_SHORT).show();
         }
         if (currentOperation.equalsIgnoreCase("+")) {
             sum("Equal");
@@ -332,8 +329,6 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (currentOperation.equalsIgnoreCase("/")) {
             divition("Equal");
-        } else {
-            Toast.makeText(this, "Please Choose Your Operation First", Toast.LENGTH_SHORT).show();
         }
 
 
