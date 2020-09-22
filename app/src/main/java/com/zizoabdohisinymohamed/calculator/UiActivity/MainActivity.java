@@ -21,7 +21,7 @@ import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Static Final Variables
+    // Static Final Variablese
     private static final String TAG = "MainActicity";
     // Variables
 
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         numberChanging = 0;
         secondeOperande = 0;
+        currentOperation="";
 
         //RecycleView For A ListOfThePs
         mRecyclerView = findViewById(R.id.recycle_View_Operation);
@@ -160,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
 
                 sum("Undo");
 
-                equal();
             } else if (undoLastOpe.lastElement().equalsIgnoreCase("*") == true) {
                 divition("Undo");
 
@@ -318,6 +318,9 @@ public class MainActivity extends AppCompatActivity {
 
    // Equal Method / This method Show to the User the Last result
     public void equal() {
+        if(binding.EtSecondOperand.getText().toString().isEmpty()){
+            Toast.makeText(this, "Some thing wrong", Toast.LENGTH_SHORT).show();
+        }
         if (currentOperation.equalsIgnoreCase("+")) {
             sum("Equal");
         } else if (currentOperation.equalsIgnoreCase("-")) {
