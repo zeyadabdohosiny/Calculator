@@ -276,8 +276,6 @@ public class MainActivity extends AppCompatActivity {
                 undoLastOpe.add("*");
                 undoLastNumber.add(secondeOperande);
                 list.add(new OperationModle("*", "" + secondeOperande));
-            } else {
-                Toast.makeText(this, "Please enter A number", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -306,8 +304,6 @@ public class MainActivity extends AppCompatActivity {
                 undoLastOpe.add("/");
                 undoLastNumber.add(secondeOperande);
                 list.add(new OperationModle("/", "" + secondeOperande));
-            } else {
-                Toast.makeText(this, "Please enter A number", Toast.LENGTH_SHORT).show();
             }
         }
 
