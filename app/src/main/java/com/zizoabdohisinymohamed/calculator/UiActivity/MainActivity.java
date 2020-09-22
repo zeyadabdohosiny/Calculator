@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             if (undoLastOpe.lastElement().equalsIgnoreCase("+") == true) {
+
                 sub("Undo");
 
             } else if (undoLastOpe.lastElement().equalsIgnoreCase("-") == true) {
